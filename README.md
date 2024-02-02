@@ -5,11 +5,12 @@ This is an example of how to train using llamaindex, chatgpt, and then store the
 **You need ChatGPT and Mongodb Atlas API Keys** They are free.
 
 1. Login to Mongodb Atlas and create a database: **llama**. Copy the connection string presented at the end.
-1. rename .env.demo to .env and put the `OPENAI_API_KEY` key and `MONGO_URI`  
+1. rename .env.demo to .env and put the `OPENAI_API_KEY` key and `MONGO_URI`  (from step 1)
 2. run `ts-node llama-mongo-train.ts`
 3. login to  Mongodb Atlas and create the Vector index on `embedding`. 
 
-`{
+`
+{
     "fields": [
       {
         "type": "vector",
@@ -18,7 +19,8 @@ This is an example of how to train using llamaindex, chatgpt, and then store the
         "similarity": "euclidean"
       }
     ]
-}`
+}
+`
 
 4. run `ts-node llama-mongo-ask.ts` to ask questions. question is inside
 
