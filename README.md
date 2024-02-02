@@ -3,10 +3,10 @@
 This is an example of how to train using llamaindex, chatgpt, and then store the document embeddings in Mongodb Atlas Vector Search and ask questions about the content.
 
 **You need ChatGPT and Mongodb Atlas access and API Keys**
-
-1. rename .env.demo to .env and put the keys
+1. Login to Mongodb Atlas and create a database: **llama**. Copy the connection string presented at the end.
+1. rename .env.demo to .env and put the `OPENAI_API_KEY` key and `MONGO_URI`  
 2. run `ts-node llama-mongo-train.ts`
-3. login to  Mongodb Atlas and create the Vector index.
+3. login to  Mongodb Atlas and create the Vector index on `embedding`. 
 
 `{
     "fields": [
